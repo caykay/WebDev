@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Get Schwifty";
+  src: url(../fonts/get_schwifty.ttf) format("truetype");
+}
+
+/* TYPE SELECTOR */
+
+body {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7))
+      no-repeat fixed,
+    url(../images/background-test.jpeg) no-repeat center center fixed;
+
+  background-size: cover;
+
+  font-family: "Courier New", monospace, sans-serif;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 700;
+  margin: auto 0;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: crimson;
+}
+
+/* CLASS SELECTORS */
+
+.content {
+  flex: 1 auto;
+  margin: auto 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content div {
+  display: flex;
+  justify-content: center;
+}
+
+.episodes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 12px;
+}
+.episodes a {
+  margin: 8px;
+}
+
+.episodes img {
+  width: 300px;
+}
+
+.episodes img:hover {
+  cursor: pointer;
+  border: 2px solid rgb(138, 26, 26);
+}
+
+.footer-image#with-confused-rick {
+  justify-content: space-between;
+}
+
+.footer-image img {
+  margin: 8px;
+  width: 30vw;
+  /* flex: 1 auto; */
+  height: auto;
+}
+
+#right-flex {
+  align-items: flex-start;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.footer,
+.header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#about-me {
+  color: rgba(9, 9, 9, 0.581);
+}
+
+.footer {
+  background-color: #eeeeee;
+  /* font-size: 24pxw; */
+}
+
+.footer img {
+  margin: 0 20px;
+}
+
+.title {
+  font-family: "Get Schwifty";
+  color: rgba(6, 88, 212, 0.808);
+  text-shadow: 1px 1px 3px rgb(124, 192, 16);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.title a {
+  display: block;
+  color: rgb(62, 178, 201);
+  text-shadow: 2px 2px 3px rgb(236, 238, 233);
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.title a:hover {
+  position: relative;
+  font-size: 80px;
+  text-shadow: 2px 2px 6px rgb(104, 24, 36);
+}
+
+.title {
+  text-align: center;
+}
+
+/* ID SELECTORS */
+
+#profile-pic {
+  width: 50px;
+  height: auto;
+}
+
+/* ANIMATIONS */
+.rotate {
+  margin-top: 90px;
+  width: 70vw;
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
