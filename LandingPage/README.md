@@ -3,7 +3,7 @@
 ## About
 A basic webpage made with just HTML and CSS. Has links to the trailers of each rick and morty season 6 episodes.
 
-[Link to page]()
+[Link to page](https://main.d53phm7a0l112.amplifyapp.com) hosted on AWS Amplify
 
 ## Credits
 ### Image Credits
