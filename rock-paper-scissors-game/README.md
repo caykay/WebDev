@@ -3,7 +3,7 @@
 A game where you play against the computer.
 There are 10 rounds per game, see if your beat the RNG.
 
-Page: [Link]()
+Page: [Link](https://main.d26opxm1d4wy6x.amplifyapp.com/)
 
 <img src="images_logos/Screenshot%202022-12-05%20at%2012.20.24%20am.png" width="300"/>
 
