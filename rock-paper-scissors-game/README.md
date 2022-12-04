@@ -11,6 +11,7 @@ Page: [Link](https://main.d26opxm1d4wy6x.amplifyapp.com/)
 
 The page has a dark/light mode feature at the top of the page, click to choose whichever you prefer.
 The default is dark mode.
+
 <img src="images_logos/Screenshot%202022-12-05%20at%2012.20.00%20am.png" width="300px"/>
 <img src="images_logos/Screenshot%202022-12-05%20at%2012.20.11%20am.png" width="300px"/>
 
