@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nova Flat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Aclonica"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="images_logos/rpsLogo.png"
+      type="image/x-icon"
+    />
+    <title>Rock-Paper-Scissors</title>
+    <script src="script.js" type="module" defer></script>
+    <script src="events.js" type="module" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="body-bg-color">
+    <div class="header">
+      <div class="change-bg">
+        <img src="images_logos/sunny.png" id="icon" />
+      </div>
+      <!-- TITLE -->
+      <div class="title">ROCK PAPER SCISSORS</div>
+      <!-- MESSAGE -->
+      <div class="message">
+        <p class="text gradient-light" >Ready to exchange fists with a computer?</p>
+        <p class="prompt gradient-light">You have <span>10</span> rounds to defeat the computer</p>
+      </div>
+    </div>
+<!-- START BUTTON -->
+    <div class="start-button"><span>START</span></div>
+
+    <!-- CONTENT (starts off as hidden) -->
+    <div class="content hide">
+      <!-- IMAGE BUTTONS -->
+      <div class="buttons">
+        <div class="img">
+          <img id="rock" src="images_logos/rock.png" alt="" />
+        </div>
+        <div class="img">
+          <img id="paper" src="images_logos/paper.png" alt="" />
+        </div>
+        <div class="img">
+          <img id="scissors" src="images_logos/scissors.png" alt="" />
+        </div>
+      </div>
+      <!-- SCORE -->
+      <div class="score">
+        <div class="player-col">
+          <p>Your Score</p>
+          <p id="player-score"></p>
+        </div>
+        <div class="computer-col">
+          <p>Computer Score</p>
+          <p id="computer-score"></p>
+        </div>
+      </div>
+
+      <!-- LIVE MESSAGE -->
+    </div>
+
+    <!-- CREDITS:
+    Images (ROCK, PAPER, SCISSORS): https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document
+    Icons: page icon: <a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors icons">Rock paper scissors icons created by Freepik - Flaticon</a>
+           Moon icon: <a href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Vectors Market - Flaticon</a>
+           Sunny icon: <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
+           -->
+  </body>
+</html>

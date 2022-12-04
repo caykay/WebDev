@@ -1,0 +1,212 @@
+/* used in DOM manipulation */
+.hide{
+  display: none !important;
+}
+
+body {
+  text-align: center;
+    /* linear-gradient(
+      180deg,
+      rgba(156, 48, 153, 0.588),
+      rgb(15, 223, 171),
+      rgb(35, 114, 243)
+    ) */
+    
+
+  height: 100vh;
+}
+
+.body-bg-color{
+  background: rgba(16, 24, 32, 0.808) no-repeat fixed;
+}
+
+.start-button {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 4vw;
+
+  width: 20vw;
+  height: 20vw;
+  margin: 50px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Border gradient settings*/
+  background: linear-gradient(rgb(163, 71, 86), white) padding-box,
+    linear-gradient(90deg, red, yellow) border-box;
+  border-radius: 50%;
+  border: solid 10px transparent;
+}
+
+.start-button:hover {
+  filter: drop-shadow(0px 0px 00.75rem red);
+  cursor: pointer;
+}
+
+
+.body, .content,
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 7vw;
+  font-family: "Courier New", Courier, monospace;
+
+  /* gradient */
+  background-image: linear-gradient(
+    90deg,
+    rgb(247, 39, 241),
+    rgb(15, 244, 34),
+    rgb(35, 114, 243)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.284);
+
+  margin-bottom: 50px;
+}
+
+.gradient-light {
+  font-family: "Aclonica";
+  font-size: 4vw;
+
+  background: linear-gradient(
+    90deg,
+    rgb(227, 9, 9),
+    rgb(231, 12, 231),
+    rgb(9, 221, 73)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* text-shadow: -2px 2px 10px rgba(247, 250, 248, 0.426); */
+}
+
+.buttons {
+  flex: 1 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.buttons .img img {
+  max-width: 200px;
+  width: 30vw;
+  height: auto;
+  border-radius: 50%;
+  background-color: rgba(77, 86, 91, 0.786);
+  margin: 18px;
+
+  /* filter: drop-shadow(0 0 0.75rem crimson); */
+}
+
+.buttons img:hover {
+  cursor: pointer;
+}
+
+/* SCORE STYLES */
+.score {
+  width: 75%;
+  /* height: auto; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.score div {
+  display: flex;
+  flex-direction: column;
+  /* color: aquamarine; */
+}
+
+.score p {
+  font-family: "Nova Flat";
+
+  /* background-color: rgb(18, 18, 214);
+  -webkit-background-clip: text; */
+  /* color:transparent; */
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
+  font-size: 4vw;
+}
+
+#rock {
+  border: solid rgb(247, 39, 241);
+}
+#rock:hover {
+  filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+#paper {
+  border: solid rgb(72, 224, 187);
+}
+#paper:hover {
+  filter: drop-shadow(0 0 0.75rem aqua);
+}
+
+#scissors {
+  border: solid rgb(57, 125, 236);
+}
+#scissors:hover {
+  filter: drop-shadow(0 0 0.75rem navy);
+}
+
+#icon {
+  padding: 5%;
+  max-width: 40px;
+  /* border: solid 4px grey; */
+  border-radius: 50%;
+  font-size: 5vw;
+  margin-bottom: 10px;
+}
+
+.sunny{
+  border: solid 4px grey;
+}
+/* Has to be different if it's the moon icon */
+.sunny:hover {
+  filter: drop-shadow(0 0 0.75rem gold);
+}
+
+.moon{
+  border: solid 4px gold;
+  background-color: rgba(70, 88, 106, 0.808);
+}
+.moon:hover{
+  filter: drop-shadow(0 0 0.75rem #000000);
+}
+
+.moon:hover, .sunny:hover{
+  cursor: pointer;
+}
+
+/* ANIMATION:  https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
+.glow {
+  font-size: 80px;
+  color: black;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
