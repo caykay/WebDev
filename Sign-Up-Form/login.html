@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <title>Log in</title>
+</head>
+
+<body>
+    <div class="right"></div>
+    <div class="left form-container">
+        <h1 class="title">Sign In to Grootsite</h1>
+        <form action="#sign-in" onsubmit="return false;">
+            <input type="email" name="email" id="email" placeholder="Email" pattern="[a-zA-Z\d]+@[a-zA-Z]+(\.[a-zA-Z]+)*\.[a-zA-Z]{2,3}" errorMessage="Invalid email address"
+                autofocus />
+            <input type="password" name="Password" id="password" minlength="6" maxlength="20" errorMessage="The password must be between 6-20 characters long."
+                placeholder="Password (6-20) characters" />
+            <div class="submit">
+                <div id="error-log"></div>
+                <button id="submit" disabled>
+                    Sign In
+                </button>
+            </div>
+            <div id="sign-in" class="other-text">
+                Don't have an account?
+                <a href="index.html">Create account</a>
+            </div>
+            <div id="terms-agreement">
+                <ion-icon id="terms" name="checkmark-outline"></ion-icon>
+                <span class="other-text">
+                    I accept the <a href="">Terms of Service</a> and
+                    <a href="">Privacy Policy.</a>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+    </script>
+</body>
+
+</html>
