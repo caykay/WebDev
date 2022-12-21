@@ -140,6 +140,9 @@
                         <div>
                             <img src="images/other_playlists/your-top-songs-2022_default_en.jpg" alt="">
                             <div class="card-title">Your Top Songs 2022</div>
+                            <!-- <div class="play-button">
+                                <ion-icon name="play-circle-sharp"></ion-icon>
+                            </div> -->
                         </div>
                         <div>
                             <img src="images/other_playlists/14.jpeg" alt="">
@@ -478,7 +481,48 @@
 
         }
 
-        // const main_content_scroll = 
+        /* TIME OF DAY */
+        const timeOfDayElement = document.getElementById('time-of-day')
+        let timeOfDay = null;
+        const time = (new Date()).getHours()
+
+        if (time < 12) timeOfDay = 'Morning'
+        else if (time < 18) timeOfDay = 'Afternoon'
+        else timeOfDay = 'Evening'
+
+        timeOfDayElement.onload = timeOfDayElement.textContent = timeOfDay;
+
+
+        /* INTRO SECTION PLAY BUTTONS ON HOVERING */
+        // all the sections in the intro category
+        const introSections = document.querySelectorAll('.intro-wrapper > div')
+        // A div container that holds the play icon
+        const introButtonWrapper = document.createElement('div')
+        // the play icon
+        const playButton = document.createElement('ion-icon')
+
+        // define the ion-icon type or give the ion-icon its content
+        playButton.setAttribute('name', 'play-circle-sharp');
+
+        // add classes to the wrapper
+        introButtonWrapper.classList.add('play-button')
+        introButtonWrapper.appendChild(playButton)
+
+        // append the wrapper as child of each categories
+        introSections.forEach(element => {
+            /* NOTE: appending an element directly to each node 
+            does not duplicate the element but just remove it from
+            where it was in the DOM before and adds it to the next/current
+            index. An element/node can only be in one place in the DOM at a time
+             */
+
+            //  ?? append a copy of the wrapper instead and all its children
+            element.appendChild(introButtonWrapper.cloneNode(true))
+            console.log('added wrapper successfully');
+        });
+
+        console.log();
+
     </script>
 </body>
 

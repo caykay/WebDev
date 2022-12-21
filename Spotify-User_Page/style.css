@@ -2,7 +2,7 @@
 
 :root{
     /* BG COLORS */
-    --theme-color:green;
+    --theme-color:rgb(62 215 96);
     --bg-color: linear-gradient(rgba(2, 66, 2, 0.903), hsl(0deg 0% 7%) 15%);
     --sidebar-bg-color: #000000;
     --footer-bg-color: hsl(0deg 0% 9%);
@@ -518,31 +518,40 @@ input[type='range']::-webkit-slider-thumb{
     height: 100%;
 
     z-index: 0;
+
+    
+
 }
 
 .content-wrapper{
     /* ! need to work out how to extend the background */
-    background-color: hsl(0deg 0% 7%);
+    /* ?? Fixed it by setting height:max-content;*/
 
+    background: var(--bg-color) scroll; 
 
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     bottom: 0;
     flex-grow: 1;
 
     /* height: auto !important; */
     z-index: 0;
-    height: 100%;
-    /* overflow: hidden; */
+    /* height: 100%; */
+    height: max-content;
+    overflow: hidden;
 
     scroll-behavior: smooth;
+
+    background-color: blue;
+
+    overflow-y: scroll;
 }
 
 .content-container{
-    background: var(--bg-color) scroll;
+    /* background: var(--bg-color) scroll;  */
     /* display: flex;
     flex-direction: column; */
     display: grid;
@@ -550,6 +559,7 @@ input[type='range']::-webkit-slider-thumb{
 
     position: relative;
     padding: 64px 16px 30px;
+    scroll-behavior: smooth;
 }
 
 .content-container > div{
@@ -586,10 +596,12 @@ input[type='range']::-webkit-slider-thumb{
 }
 
 .intro-wrapper{
-    grid-template-columns: repeat(auto-fill, minmax(max(200px, 25%), 1fr));
+    --min-col-width: 270px;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--min-col-width), 25%), 1fr));
     grid-template-rows: auto;
     gap: 16px;
 }
+
 
 .intro-wrapper img {
     display: block;
@@ -620,6 +632,7 @@ input[type='range']::-webkit-slider-thumb{
     width: 100%;
 
     cursor: pointer;
+    padding-right: 20px;
 }
 
 .intro-wrapper > div:hover{
@@ -655,12 +668,13 @@ hr {
 ::-webkit-scrollbar{
     -webkit-appearance: none;
     width: 14px;
-
+    /* background-color: inherit; */
+    z-index: -1;
 }
 
 ::-webkit-scrollbar-thumb{
     border-radius: 8px;
-    border: 3px solid rgb(0, 0, 0,0);
+    border: 3px solid transparent;
     background-clip: padding-box;
     background-color: rgba(148, 148, 148, 0.791);
     position: relative;
@@ -671,11 +685,65 @@ hr {
     background-color: rgb(148, 148, 148);
 }
 
-/* .content-wrapper::-webkit-scrollbar-thumb{
-    background-color: rgb(87, 87, 87);
-} */
+.content-wrapper, .scroll-playlists{
+    /* background-color: red; */
+}
 
 
 .hide{
     display: none !important;
+}
+
+.play-button{
+    display: flex;
+    /* block-size: 48px; */
+    width: 50px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+
+.play-button ion-icon{
+    font-size: 3.5rem;
+    color: var(--theme-color);
+    cursor: auto;
+
+    transition: transform 0.2s ease;
+
+    position: relative;
+    
+    filter: drop-shadow( 0 0.2rem 0.17rem rgba(0, 0, 0, 0.833));
+    visibility: hidden;
+}
+
+.intro-wrapper > div:hover .play-button > ion-icon{
+    visibility: visible;
+}
+
+.play-button ion-icon::after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    top: 12px;
+    left: 12px;
+    z-index: -1;
+}
+
+.play-button ion-icon:hover{
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width:808px) {
+    .intro-wrapper{
+        --min-col-width: 200px;
+    }
+    
+    .play-button{
+        display: none;
+    }
 }
